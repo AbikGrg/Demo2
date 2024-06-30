@@ -9,7 +9,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <Header />
+        {/* <Header /> */}
         <div className="w-full h-screen flex flex-col">
           <Routes>
             <Route path="/" element={<Login />} />

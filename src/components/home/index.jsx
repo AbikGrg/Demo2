@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useAuth } from '../../contexts/authContext';
 import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import { app } from '../../firebase/firebase'; 
-import DashNewsFeed from '../apis/newfeed';
-import DashWeather from '../apis/weather';
-import StockData from '../apis/stock';
+
+import Dashboard from '../Dashboard/dashboard';
+import Showcase from '../Dashboard/Showcase';
 
 const Home = () => {
     const { currentUser } = useAuth();
@@ -30,7 +30,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className='text-2xl font-bold pt-14'>
+            {/* <div className='text-2xl font-bold pt-2'>
                 Hello {userData.firstName} {userData.lastName}
             </div>
             <div>
@@ -39,11 +39,9 @@ const Home = () => {
                 Lastname: {userData.lastName}
                 <br/>
                 Email: {userData.email || currentUser.email}
-            </div>
+            </div> */}
             <div>
-                <DashNewsFeed/>
-                <DashWeather/>
-                <StockData/>
+                <Showcase/> 
             </div>
         </div>
         
