@@ -28,7 +28,6 @@ function DashNewsFeed() {
 
     return (
         <Card className="max-w-3xl" decoration="top" decorationColor="blue">
-            <Title>News Feed API</Title>
             <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
     <div className="px-4 py-5 bg-blue-500">
         <h2 className="text-xl font-bold text-white">News Feed API</h2>
@@ -40,8 +39,7 @@ function DashNewsFeed() {
                 <p className="text-gray-700">{item.author}</p>
                 <ul className="mt-4">
                     <li className="flex items-center space-x-4">
-                        <svg className="h-5 w-5 text-sky-400" fill="currentColor" viewBox="0 0 20 20">
-                            {/* Icon SVG path here */}
+                        <svg className="h-5 w-5 text-sky-400" fill="currentColor" viewBox="0 0 20 20">mae
                         </svg>
                         <div>
                             <p className="font-bold truncate">{item.source.id}</p>

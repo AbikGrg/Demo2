@@ -3,7 +3,7 @@ import {
     Title,
     Card,
 } from "@tremor/react";
-import styles from "./weather.module.scss";
+
 function DashWeather() {
     const [weather, setWeather] = useState(null);
 
@@ -28,15 +28,14 @@ function DashWeather() {
 
     return (
         <Card className="max-w-3xl" decoration="top" decorationColor="blue">
-            <Title>Weather Data API</Title>
             {weather ? (
-                <div className={styles.widgetContainer}>
-                    <h2 className={styles.header}>Location: {weather.name}</h2>
-                    <p className={styles.paragraph}>Temperature: {weather.main ? (weather.main.temp - 273.15).toFixed(2) : "--"}°C</p>
-                    <p className={styles.paragraph}>Condition: {weather.weather && weather.weather.length > 0 ? weather.weather[0].description.toUpperCase() : "--"}</p>
-                </div>
+                <div className="p-8">
+                <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Weather in {weather.name}</div>
+                <div className="block mt-1 text-lg leading-tight font-medium text-black">Temperature: {Math.round(weather.main.temp - 273.15)}°C</div>
+                <p className="mt-2 text-gray-500">{weather.weather[0].main} ({weather.weather[0].description})</p>
+              </div>
             ) : (
-                <div className={styles.paragraph}>Loading weather...</div>
+                <div className='p-8'>Loading weather...</div>
             )}
         </Card>
     );
