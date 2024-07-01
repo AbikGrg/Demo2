@@ -2,10 +2,15 @@ import React from 'react'
 import DashNewsFeed from '../apis/newfeed'
 import DashWeather from '../apis/weather'
 import StockData from '../apis/stock'
-
 import Navbar from './Navbar'
 
 
+/**
+ *Showcasing 3 components and navbar for the dashboard
+ *
+ * @param {*} {sidebarToggle, setSidebarToggle}
+ * @return {*} 
+ */
 const Dashboard = ({sidebarToggle, setSidebarToggle}) => {
   return (
     <div className={`${sidebarToggle ? "" : " ml-64 "} w-full`}>

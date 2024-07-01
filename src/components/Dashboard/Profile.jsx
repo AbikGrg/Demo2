@@ -3,7 +3,11 @@ import { useAuth } from '../../contexts/authContext';
 import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import { app } from '../../firebase/firebase';
 
-// Simple Profile Page Component
+/**
+ * Fetching avatar and displaying currentuser data from firestore
+ *
+ * @return {*} 
+ */
 function Profile() {
     const { currentUser } = useAuth();
     const [userData, setUserData] = useState({ firstName: '', lastName: '', email: '' });

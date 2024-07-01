@@ -4,6 +4,13 @@ import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import { app } from '../../firebase/firebase'; 
 import Showcase from '../Dashboard/Showcase';
 
+
+/**Fetching the user data from the firestore
+ *
+ *
+ * @return {*} 
+ */
+
 const Home = () => {
     const { currentUser } = useAuth();
     const [userData, setUserData] = useState({ firstName: '', lastName: '', email: '' });

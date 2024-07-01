@@ -3,6 +3,13 @@ import {
   Card
 } from "@tremor/react";
 
+
+
+/**
+ *Fetching the stock data from the alphavantage API and displaying it in card components
+ *
+ * @return {*} 
+ */
 const StockData = () => {
   const [stock, setStock] = useState(null);
   const [loading, setLoading] = useState(true);

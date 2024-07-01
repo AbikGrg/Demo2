@@ -3,6 +3,13 @@ import {
     Card
 } from "@tremor/react";
 
+
+
+/**
+ *Fetching the news data from the newsapi.org API and displaying it in card components
+ *
+ * @return {*} 
+ */
 function DashNewsFeed() {
     const [articles, setArticles] = useState([]);
 

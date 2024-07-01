@@ -3,6 +3,13 @@ import {
     Card
 } from "@tremor/react";
 
+
+
+/**
+ *Fetching the weather data from the openweathermap API and displaying it in card components
+ *
+ * @return {*} 
+ */
 function DashWeather() {
     const [weather, setWeather] = useState(null);
 

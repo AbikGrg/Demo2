@@ -4,7 +4,8 @@ import { FaHome, FaNewspaper, FaSun, FaChartLine, FaUser } from 'react-icons/fa'
 
 const Sidebar = ({ sidebarToggle, username }) => {
   return (
-    <div className={`${sidebarToggle ? "hidden" : "block"} w-64 bg-gray-800 fixed h-full px-4 py-2`}>
+    //Toggle to sidebar
+    <div className={`${sidebarToggle ? "hidden" : "block"} w-64 bg-gray-800 fixed h-full px-4 py-2`}> 
       <div>
         <h1 className="text-2xl text-white font-bold">Welcome</h1>
       </div>

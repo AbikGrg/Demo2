@@ -4,6 +4,13 @@ import { useAuth } from '../../contexts/authContext'
 import { doSignOut } from '../../firebase/auth'
 import { FaBars, FaUserCircle } from 'react-icons/fa'
 
+
+/**
+ * Navbar for the dashboard, contains the sidebar toggle and user profile
+ *
+ * @param {*} {sidebarToggle, setSidebarToggle}
+ * @return {*} 
+ */
 const Navbar = ({sidebarToggle, setSidebarToggle}) => {
     const navigate = useNavigate()
     const { userLoggedIn } = useAuth()

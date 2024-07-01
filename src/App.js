@@ -8,6 +8,12 @@ import Stocks from "./components/apis/stock";
 import { AuthProvider } from "./contexts/authContext";
 import DashNewsFeed from "./components/apis/newfeed";
 
+/**
+ *Routing for the web-app
+ *
+ * @return {*} 
+ */
+
 function App() {
   return (
     <AuthProvider>
@@ -15,6 +21,7 @@ function App() {
         {/* <Header /> */}
         <div className="w-full h-screen flex flex-col">
           <Routes>
+            
             <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
             <Route path='/profile' element={<Profile/>}/>

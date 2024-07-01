@@ -5,9 +5,15 @@ import { doCreateUserWithEmailAndPassword } from '../../../firebase/auth';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 import { app, auth, db } from '../../../firebase/firebase'
 
+
+
+/**
+ * Register component
+ *
+ * @return {*} 
+ */
 const Register = () => {
     const navigate = useNavigate();
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState(''); // Corrected typo
