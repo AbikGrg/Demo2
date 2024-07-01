@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useAuth } from '../../contexts/authContext';
 import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import { app } from '../../firebase/firebase'; 
-
-import Dashboard from '../Dashboard/dashboard';
 import Showcase from '../Dashboard/Showcase';
 
 const Home = () => {

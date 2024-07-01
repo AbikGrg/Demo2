@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import {
-    Card,
-    Title
+    Card
 } from "@tremor/react";
 
 function DashNewsFeed() {
@@ -10,7 +9,7 @@ function DashNewsFeed() {
     useEffect(() => {
         const fetchNews = async () => {
             const apiKey = "2309499006b1495c9e68562c5992ba1b";
-            const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+            const url = `https://newsapi.org/v2/top-headlines?country=ca&apiKey=${apiKey}`;
 
             try {
                 const response = await fetch(url);

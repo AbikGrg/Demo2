@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import {
-    Title,
-    Card,
+    Card
 } from "@tremor/react";
 
 function DashWeather() {
@@ -27,8 +26,12 @@ function DashWeather() {
     console.log("The weather data::>>", weather, !!weather);
 
     return (
-        <Card className="max-w-3xl" decoration="top" decorationColor="blue">
-            {weather ? (
+        <Card className="max-w-3xl" decoration="top" decorationColor="red" >
+            <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="px-4 py-5 bg-red-500">
+        <h2 className="text-xl font-bold text-white">Weather API</h2>
+    </div>
+    {weather ? (
                 <div className="p-8">
                 <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Weather in {weather.name}</div>
                 <div className="block mt-1 text-lg leading-tight font-medium text-black">Temperature: {Math.round(weather.main.temp - 273.15)}°C</div>
@@ -37,6 +40,7 @@ function DashWeather() {
             ) : (
                 <div className='p-8'>Loading weather...</div>
             )}
+    </div>        
         </Card>
     );
 }

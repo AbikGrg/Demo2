@@ -1,8 +1,8 @@
-import React,{useState} from 'react'
+import React from 'react'
 import DashNewsFeed from '../apis/newfeed'
 import DashWeather from '../apis/weather'
 import StockData from '../apis/stock'
-import Sidebar from './Sidebar'
+
 import Navbar from './Navbar'
 
 
@@ -12,9 +12,16 @@ const Dashboard = ({sidebarToggle, setSidebarToggle}) => {
       <Navbar 
       sidebarToggle={sidebarToggle} 
       setSidebarToggle={setSidebarToggle} />
-      <DashNewsFeed/>
-      <DashWeather />
-      <StockData/>
+
+     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+        <div className="bg-white shadow rounded-lg p-4 h-auto">
+          <DashNewsFeed />
+        </div>       
+          <DashWeather />
+        <div className="bg-white shadow rounded-lg p-4 h-auto">
+          <StockData />
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import {
+  Card
+} from "@tremor/react";
 
 const StockData = () => {
   const [stock, setStock] = useState(null);
@@ -42,13 +45,20 @@ const StockData = () => {
     return <div>Error: {error}</div>;
   }
   return (
+    <Card className="max-w-3xl" decoration="top" decorationColor="blue">
+            <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="px-4 py-5 bg-green-500">
+        <h2 className="text-xl font-bold text-white">News Feed API</h2>
+    </div>
     <div>
       {stock ? (
         <pre>{JSON.stringify(stock, null, 2)}</pre>
       ) : (
-        <p>No stock data available.</p>
+        <p>Unable to fetch.</p>
       )}
     </div>
+    </div>
+    </Card>
   );
 };
 
